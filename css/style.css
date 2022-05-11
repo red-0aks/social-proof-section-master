@@ -1,0 +1,229 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* VARIABLES */
+:root{
+    /* Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 29%, 91%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../images/bg-pattern-top-mobile.svg'), 
+                      url('../images/bg-pattern-bottom-mobile.svg');
+    background-position: left top, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+}
+
+/* MOBILE FIRST */
+.container{
+    margin: 4rem auto;
+    max-width: 17rem;
+}
+
+.sec-hero{
+    text-align: center;
+}
+
+.hero-heading h1{
+    font-size: 2.3rem;
+    line-height: 0.8;
+    margin-bottom: 2rem;
+    color: var(--Very-Dark-Magenta);
+}
+
+.hero-descript{
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.hero-descript br{
+    display: none;
+}
+
+.hero-ranking{
+    margin-bottom: 2rem;
+}
+
+.box-ranking{
+    padding: 1rem 0;
+    border-radius: 8px;
+    background-color: var(--Light-Grayish-Magenta);
+}
+
+.ranking-descript{
+    font-weight: 600;
+    margin-top: .5rem;
+    color: var(--Very-Dark-Magenta);
+}
+
+.box-comment{
+    border-radius: 8px;
+    padding: 2rem 1.3rem;
+    color: var(--Light-Grayish-Magenta);
+    background-color: var(--Very-Dark-Magenta);
+}
+
+.box-ranking:nth-child(2)
+{
+    margin: 1rem 0;
+}
+
+.box-comment:nth-child(2)
+{
+    margin: 1rem 0;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.user img{
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
+    border-radius: 100%;
+}
+
+.user-name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user-name span{
+    display: block;
+    font-weight: 400;
+    color: var(--Soft-Pink);
+}
+
+.box-comment .comment{
+    max-width: 16rem;
+    line-height: 1.2;
+} 
+
+@media screen and (min-width: 1080px){
+    body{
+        background-image: url('../images/bg-pattern-top-desktop.svg'), 
+                          url('../images/bg-pattern-bottom-desktop.svg');
+        padding: 0 5%;                  
+    }
+    
+    .container{
+        max-width: 70rem;
+        margin: 6rem auto;
+    }
+
+    .sec-hero{
+        display: flex;
+        text-align: initial;
+        margin-bottom: 4rem;
+        justify-content: space-between;
+    }
+
+    .hero-heading h1{
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-heading br{
+        display: inline;
+    }
+
+    .hero-descript{
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .hero-ranking{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .box-ranking{
+        display: flex;
+        max-width: 29rem;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .ranking-descript{
+        display: inline;
+        margin: 0 2rem;
+        font-size: 1.1rem;
+    }
+
+    .box-ranking:nth-child(2){
+        align-self: center;
+    }
+
+    .box-ranking:nth-child(3){
+        align-self: flex-end;
+    }
+
+    .sec-comment{
+        display: flex;
+        height: 17rem;
+        justify-content: space-between;
+    }
+
+    .box-comment{
+        width: 31%;
+        height: 15rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.1rem;
+        padding: 0 1.8rem;
+    }
+
+    .box-comment:nth-child(2){
+        align-self: center;
+        margin: 0;
+    }
+
+    .box-comment:nth-child(3){
+        align-self: flex-end;
+    }
+
+    .user{
+        margin-top: 3rem;
+    }
+
+    .box-comment .comment{
+        max-width: 20rem;
+        line-height: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    
+
+    
+
+}
+/* ATTRIBUTION */
+.attribution { 
+    padding: 16px;
+    font-size: 11px; 
+    text-align: center;
+    color: black;
+}
+.attribution a { 
+    color: var(--Soft-Pink); 
+}
